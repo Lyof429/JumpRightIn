@@ -1,0 +1,26 @@
+modLoader="javafml"
+loaderVersion="[47,)"
+issueTrackerURL="https://github.com/Mrbysco/JumpRightIn/issues"
+license="MIT"
+
+[[mods]]
+modId="jumprightin"
+version="${file.jarVersion}"
+displayName="Jump Right In"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/jump-right-in"
+authors="Mrbysco, Nekomaster1000"
+description='''
+Skip the main menu and get sent straight into a world!
+'''
+[[dependencies.jumprightin]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.20,1.21)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.jumprightin]]
+modId="forge"
+mandatory=true
+versionRange="[47,)"
+ordering="NONE"
+side="BOTH"
