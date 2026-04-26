@@ -2,7 +2,7 @@ package com.mrbysco.jumprightin;
 
 import com.mrbysco.jumprightin.config.JumpConfig;
 import com.mrbysco.jumprightin.config.LoadType;
-import net.minecraftforge.fml.loading.FMLPaths;
+import net.fabricmc.loader.api.FabricLoader;
 
 import java.io.File;
 import java.nio.file.Path;
@@ -18,7 +18,7 @@ public class WorldHelper {
 		LoadType loadType = JumpConfig.CLIENT.loadType.get();
 		if (loadType == LoadType.ONCE) {
 			// Create a file in config folder to indicate that the world/server has been loaded once
-			Path configDir = FMLPaths.CONFIGDIR.get();
+			Path configDir = FabricLoader.getInstance().getConfigDir();
 			File markerFile = configDir.resolve("jumprightin_loaded.txt").toFile();
 			if (markerFile.exists()) {
 				if (levelName.isBlank()) {
@@ -42,5 +42,4 @@ public class WorldHelper {
 		}
 		return true;
 	}
-
 }

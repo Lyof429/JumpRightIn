@@ -30,7 +30,6 @@ public class JumpConfig {
 		}
 	}
 
-
 	public static final ForgeConfigSpec clientSpec;
 	public static final Client CLIENT;
 
